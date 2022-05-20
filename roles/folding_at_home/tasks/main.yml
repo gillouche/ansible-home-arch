@@ -1,0 +1,28 @@
+---
+# tasks file for folding_at_home
+
+- name: Install Folding at home
+  yay: 
+    name: ["foldingathome", "fahviewer", "fahcontrol"]
+    state: latest
+
+- name: Copy config
+  copy:
+    src: config.xml
+    dest: /etc/foldingathome/config.xml
+    mode: 0644
+    owner: root
+    group: root
+
+- name: Enable foldingathome service
+  systemd:
+    name: foldingathome
+    enabled: false
+    state: stopped
+
+- name: Enable foldingathome-nvidia service
+  systemd:
+    name: foldingathome-nvidia 
+    enabled: true
+    state: started
+    no_block: true
