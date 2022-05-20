@@ -1,0 +1,45 @@
+---
+# tasks file for env-setup
+
+- name: Create group for user
+  group:
+    name: "{{ target_user }}"
+    state: present
+
+- name: Update main group user
+  user:
+    name: "{{ target_user }}"
+    group: "{{ target_user }}"
+    append: yes
+
+- name: Update groups of user
+  user:
+    name: "{{ target_user }}"
+    groups: "wheel"
+    append: yes
+
+- name: Change home group directory to new group
+  file:
+    path: "/home/{{ target_user }}"
+    owner: "{{ target_user }}"
+    group: "{{ target_user }}"
+
+- name: Copy scripts 
+  template:
+    src: "{{ item.src }}"
+    dest: "/usr/local/bin/{{ item.path }}"
+    owner: "{{ target_user }}"
+    group: "{{ target_user }}"
+    mode: 0755
+  with_filetree: ../templates/scripts
+
+- name: Update repo and upgrade
+  pacman: 
+    update_cache: yes
+    upgrade: yes
+
+- name: Install common packages
+  pacman:
+    state: latest
+    name: ['curl', 'wget', 'lsof', 'jq', 'dos2unix', 'the_silver_searcher', 'ranger']
+...

@@ -1,0 +1,10 @@
+---
+# playbook used to provision apps common to all my environments
+
+- hosts: all
+  become: true
+  become_method: sudo
+  roles:
+    - facts
+    - env-setup
+...
