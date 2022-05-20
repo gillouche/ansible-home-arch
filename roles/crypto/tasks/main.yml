@@ -1,0 +1,12 @@
+---
+# tasks file for crypto
+
+- name: Install ledger-live
+  yay: 
+    name: ledger-live
+    state: latest
+
+- name: Install cro-chain-desktop-bin
+  yay: 
+    name: cro-chain-desktop-bin
+    state: latest

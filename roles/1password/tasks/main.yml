@@ -1,0 +1,7 @@
+---
+# tasks file for 1password
+
+- name: Install 1password
+  yay: 
+    name: 1password
+    state: latest
