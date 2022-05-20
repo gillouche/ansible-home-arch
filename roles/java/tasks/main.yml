@@ -1,0 +1,8 @@
+---
+# tasks file for java
+
+- name: Install java and tools
+  yay: 
+    name: ["maven", "gradle", "jdk-openjdk"]
+    state: latest
+    

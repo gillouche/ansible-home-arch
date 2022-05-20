@@ -1,6 +1,8 @@
 # ansible-arch-home
 Ansible playbook to configure my desktop computer.
 
+This is in addition to the [dotfiles](https://github.com/gillouche/dotfiles) repository.
+
 ## Requirements
 
 * python3
