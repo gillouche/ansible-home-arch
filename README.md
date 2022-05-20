@@ -7,6 +7,9 @@ This is in addition to the [dotfiles](https://github.com/gillouche/dotfiles) rep
 
 * python3
 * pip
+* OS stuff: Xorg, DE, GPU drivers, ...
+
+Some roles install some KDE stuff.
 
 ## Install
 

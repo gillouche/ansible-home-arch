@@ -41,7 +41,7 @@
 - name: Install common packages
   pacman:
     state: latest
-    name: ['curl', 'wget', 'lsof', 'jq', 'dos2unix', 'the_silver_searcher', 'ranger']
+    name: ['curl', 'wget', 'lsof', 'jq', 'dos2unix', 'the_silver_searcher', 'ranger', 'ncdu']
 
 - name: "Define role executed var {{ role_name }}_was_executed"
   set_fact:

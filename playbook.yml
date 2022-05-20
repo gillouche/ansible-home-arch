@@ -8,6 +8,8 @@
     - facts
     - env_setup
     - aur_helper
+    - maintenance
+    - monitoring
     - python
     - vscodium
     - browsers
@@ -24,4 +26,5 @@
     - crypto
     - 1password
     - vpn
+    - yubikey
 ...

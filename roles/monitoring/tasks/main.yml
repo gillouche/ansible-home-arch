@@ -1,0 +1,7 @@
+---
+# tasks file for monitoring
+
+- name: Install bpytop
+  yay: 
+    name: bpytop
+    state: latest

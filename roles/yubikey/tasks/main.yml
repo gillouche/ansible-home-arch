@@ -1,0 +1,7 @@
+---
+# tasks file for yubikey
+
+- name: Install yubikey
+  yay: 
+    name: ["yubikey-manager", "yubikey-manager-qt"]
+    state: latest
