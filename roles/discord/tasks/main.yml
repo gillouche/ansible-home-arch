@@ -1,7 +1,0 @@
----
-# tasks file for discord
-
-- name: Install discord application
-  pacman:
-    name: discord
-    state: latest

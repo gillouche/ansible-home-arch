@@ -1,0 +1,8 @@
+---
+# tasks file for spotify
+
+- name: Install spotify
+  yay: 
+    name: spotify
+    state: latest
+...

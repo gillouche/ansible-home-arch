@@ -1,0 +1,7 @@
+---
+# tasks file for chats
+
+- name: Install chat apps
+  yay: 
+    name: ["discord", "slack-desktop", "element-desktop", "signal-desktop"]
+    state: latest
