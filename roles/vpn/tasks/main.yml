@@ -1,0 +1,7 @@
+---
+# tasks file for vpn
+
+- name: Install protonvpn stuff
+  yay: 
+    name: ["python-protonvpn-nm-lib", "protonvpn-cli", "protonvpn", "protonvpn-gui"]
+    state: latest
