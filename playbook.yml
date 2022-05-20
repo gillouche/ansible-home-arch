@@ -9,4 +9,7 @@
     - env_setup
     - aur_helper
     - python
+    - vscodium
+    - browsers
+    - aws_cli_v2
 ...

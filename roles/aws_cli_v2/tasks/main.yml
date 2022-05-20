@@ -1,0 +1,9 @@
+---
+# tasks file for aws_cli_v2
+
+- name: Install aws-cli-v2-bin
+  yay: 
+    name: aws-cli-v2-bin
+    state: latest
+
+...
