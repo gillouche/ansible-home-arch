@@ -6,5 +6,7 @@
   become_method: sudo
   roles:
     - facts
-    - env-setup
+    - env_setup
+    - aur_helper
+    - python
 ...
