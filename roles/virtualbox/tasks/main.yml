@@ -1,0 +1,7 @@
+---
+# tasks file for virtualbox
+
+- name: Install virtualbox
+  yay: 
+    name: ["virtualbox", "virtualbox-guest-iso", "virtualbox-host-modules-arch"]
+    state: latest
