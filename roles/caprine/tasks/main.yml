@@ -1,0 +1,8 @@
+---
+# tasks file for caprine
+
+- name: Install caprine
+  pacman:
+    state: latest
+    name: ['caprine']
+...
