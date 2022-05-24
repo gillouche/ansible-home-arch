@@ -8,5 +8,5 @@ else
     verbosity=""
 fi
 
-ansible-playbook -e target_user=$USER -i hosts --ask-become-pass playbook.yml ${verbosity}
+ansible-playbook -e target_user=$USER -i hosts.yml --ask-become-pass site.yml ${verbosity}
 

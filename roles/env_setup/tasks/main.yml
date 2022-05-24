@@ -37,11 +37,13 @@
   pacman: 
     update_cache: yes
     upgrade: yes
+  become: true
 
 - name: Install common packages
   pacman:
     state: latest
     name: ['curl', 'wget', 'lsof', 'jq', 'dos2unix', 'the_silver_searcher', 'ranger', 'ncdu']
+  become: true
 
 - name: "Define role executed var {{ role_name }}_was_executed"
   set_fact:
