@@ -21,6 +21,12 @@
     yay_installed: true
   when: "'command not found' not in result.stderr"
 
+- name: Install fakeroot
+  pacman:
+    name: fakeroot
+    state: latest
+  when: not yay_installed
+
 - name: Remove work dir if existing
   file:
     path: "{{ yay_work_dir_path }}"
