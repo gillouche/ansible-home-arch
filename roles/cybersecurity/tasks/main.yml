@@ -1,0 +1,7 @@
+---
+# tasks file for cybersecurity
+
+- name: Install password cracking tools
+  yay:
+    state: latest
+    name: ['hashcat', 'john', 'cuda']
