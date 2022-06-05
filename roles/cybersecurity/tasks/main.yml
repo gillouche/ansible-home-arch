@@ -4,4 +4,4 @@
 - name: Install password cracking tools
   yay:
     state: latest
-    name: ['hashcat', 'john', 'cuda']
+    name: ['hashcat', 'john', 'cuda', 'seclists']
