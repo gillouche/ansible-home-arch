@@ -1,0 +1,7 @@
+---
+# tasks file for devices
+
+- name: Install ckb-next driver for corsair keyboard
+  yay:
+    name: ckb-next 
+    state: latest 
