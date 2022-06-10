@@ -1,11 +1,9 @@
 ---
-# playbook used to provision apps common to all my environments
-
 - hosts: localhost
   roles:
     - facts
-    - env_setup
     - aur_helper
+    - env_setup
     - maintenance
     - monitoring
     - python
@@ -29,4 +27,5 @@
     - folding_at_home
     - cybersecurity
     - devices
+    - security
 ...

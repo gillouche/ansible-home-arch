@@ -9,4 +9,3 @@ else
 fi
 
 ansible-playbook -e target_user=$USER -i hosts.yml --ask-become-pass site.yml ${verbosity}
-

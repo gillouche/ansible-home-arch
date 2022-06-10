@@ -56,8 +56,6 @@
   shell: 
     cmd: yes | makepkg -sr
     chdir:  "{{ yay_work_dir_path }}"
-  become_method: runas
-  become_user: "{{ target_user }}"
   when: not yay_installed
 
 - name: Register package name
