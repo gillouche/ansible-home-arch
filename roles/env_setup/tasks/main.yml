@@ -31,19 +31,12 @@
     owner: "{{ target_user }}"
     group: "{{ target_user }}"
     mode: 0755
-  with_filetree: ../templates/scripts
-
-- name: Update repo and upgrade
-  pacman: 
-    update_cache: yes
-    upgrade: yes
-  become: true
+  with_community.general.filetree: ../templates/scripts
 
 - name: Install common packages
-  pacman:
+  yay:
     state: latest
-    name: ['curl', 'wget', 'lsof', 'jq', 'dos2unix', 'the_silver_searcher', 'ranger', 'ncdu']
-  become: true
+    name: ['curl', 'wget', 'jq', 'dos2unix', 'the_silver_searcher', 'ranger', 'ncdu']
 
 - name: "Define role executed var {{ role_name }}_was_executed"
   set_fact:

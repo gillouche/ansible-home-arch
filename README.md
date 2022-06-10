@@ -27,4 +27,4 @@ Additionally, the verbosity can be passed to the script
 bash run.sh -vvvv
 ```
 
-which will print the facts and exits.
+which will print the facts and exits (if 4).

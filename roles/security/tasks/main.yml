@@ -1,0 +1,10 @@
+---
+# tasks file for security
+
+- name: Install security app 
+  yay:
+    name: "{{ item }}"
+    state: latest 
+  with_items:
+    - lynis
+    - rkhunter
