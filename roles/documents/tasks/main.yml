@@ -1,7 +1,0 @@
----
-# tasks file for documents
-
-- name: Install apps 
-  yay:
-    name: ["pandoc", "texlive-core", "kile"]
-    state: latest

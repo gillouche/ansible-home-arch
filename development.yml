@@ -1,0 +1,14 @@
+---
+- name: Import common playbook
+  import_playbook: common.yml
+
+- hosts: localhost
+  roles:
+    - aws_cli_v2
+    - docker
+    - java
+    - jetbrains
+    - postman
+    - kubernetes
+    - virtualbox
+...

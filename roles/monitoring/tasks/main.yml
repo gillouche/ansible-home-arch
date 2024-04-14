@@ -5,3 +5,8 @@
   yay: 
     name: bpytop
     state: latest
+
+- name: Install glances
+  yay: 
+    name: glances
+    state: latest

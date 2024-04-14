@@ -15,5 +15,4 @@
   systemd:
     name: paccache.timer
     enabled: yes
-    state: restarted
   become: true

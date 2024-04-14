@@ -10,7 +10,6 @@
   user:
     name: "{{ target_user }}"
     group: "{{ target_user }}"
-    append: yes
 
 - name: Update groups of user
   user:

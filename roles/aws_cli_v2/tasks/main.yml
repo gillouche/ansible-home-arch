@@ -1,9 +1,9 @@
 ---
 # tasks file for aws_cli_v2
 
-- name: Install aws-cli-v2-bin
+- name: Install aws-cli-v2
   yay: 
-    name: aws-cli-v2-bin
+    name: aws-cli-v2
     state: latest
 
 ...

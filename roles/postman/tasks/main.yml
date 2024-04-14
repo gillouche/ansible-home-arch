@@ -3,6 +3,6 @@
 
 - name: Install postman-bin
   yay: 
-    name: postman-bin
+    name: ["postman-bin"]
     state: latest
 ...

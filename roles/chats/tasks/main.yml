@@ -3,5 +3,5 @@
 
 - name: Install chat apps
   yay: 
-    name: ["discord", "slack-desktop", "element-desktop", "signal-desktop"]
+    name: ["discord", "slack-desktop", "signal-desktop", "caprine"]
     state: latest

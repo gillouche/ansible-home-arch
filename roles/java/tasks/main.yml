@@ -3,6 +3,5 @@
 
 - name: Install java and tools
   yay: 
-    name: ["maven", "gradle", "jdk-openjdk"]
+    name: ["maven", "gradle", "jdk-openjdk", "jdk17-openjdk"]
     state: latest
-    
