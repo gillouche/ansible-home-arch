@@ -4,9 +4,6 @@
 - name: Install browser packages
   yay:
     state: latest
-    name: ['firefox', 'arkenfox-user.js', 'brave-bin']
-
-- name: Execute arkenfox-updater
-  shell: yes | arkenfox-updater
+    name: ['firefox', 'brave-bin']
 
 ...
