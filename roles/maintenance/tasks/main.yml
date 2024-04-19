@@ -16,3 +16,9 @@
     name: paccache.timer
     enabled: yes
   become: true
+
+- name: Update repository (Arch)
+  pacman:
+    update_cache: yes
+    upgrade: yes
+  become: true

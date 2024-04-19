@@ -9,22 +9,24 @@
   shell:
     cmd: which yay
   register: result
+  ignore_errors: true
   changed_when: false
 
 - name: Set fact that yay is not installed 
   set_fact:
     yay_installed: false
-  when: "'not found' in result.stderr"
+  when: "'no yay in' in result.stderr"
 
 - name: Set fact that yay is installed 
   set_fact:
     yay_installed: true
-  when: "'not found' not in result.stderr"
+  when: "'no yay in' not in result.stderr"
 
 - name: Install fakeroot
   pacman:
     name: fakeroot
     state: latest
+  become: true
   when: not yay_installed
 
 - name: Remove work dir if existing
@@ -54,7 +56,7 @@
 
 - name: Build yay
   shell: 
-    cmd: yes | makepkg -sr
+    cmd: makepkg
     chdir:  "{{ yay_work_dir_path }}"
   when: not yay_installed
 
@@ -69,14 +71,10 @@
   pacman:
     name: "{{ yay_work_dir_path }}/{{ yay_package_name.stdout_lines[0] }}"
     state: present
+  become: true
   when: not yay_installed
 
 - name: "Define role executed var {{ role_name }}_was_executed"
   set_fact:
     "{{ role_name }}_was_executed": true
     cacheable: true
-
-- name: Update cache/upgrade
-  yay:
-    update_cache: yes 
-    upgrade: yes
