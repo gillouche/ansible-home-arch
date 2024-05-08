@@ -1,0 +1,12 @@
+---
+# tasks file for pw_cracking
+
+- name: Install hashcat, john, ...
+  yay: 
+    name: ["hashcat", "john", "seclists"]
+    state: latest
+
+- name: Install AMD opencl
+  yay: 
+    name: ["rocm-opencl-sdk"]
+    state: latest
