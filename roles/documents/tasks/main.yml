@@ -3,5 +3,5 @@
 
 - name: Install apps 
   yay:
-    name: ["pandoc", "texlive-core", "kile"]
+    name: ["pandoc", "texlive-core", "kile", "obsidian"]
     state: latest
